@@ -22,7 +22,8 @@ A lightweight app to rank candidate resumes against a job description. It uses P
 5. Config: .env via python-dotenv
 
 ### Architecture
-'''
+
+```plaintext
 
 [User] 
   └─> Streamlit UI
@@ -42,7 +43,7 @@ A lightweight app to rank candidate resumes against a job description. It uses P
              ▼
         [Streamlit session state]
         keeps last results visible across reruns (e.g., CSV clicks)
-'''
+```
 
 ### How to use
 
