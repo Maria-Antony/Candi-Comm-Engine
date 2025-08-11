@@ -1,7 +1,7 @@
 from typing import Dict, Any, List, Tuple
 from openai import OpenAI
 from settings import (
-    OPENAI_API_KEY, OPENAI_MODEL,
+    OPENAI_MODEL,
     MAX_OPENAI_BUDGET_USD, OPENAI_PRICE_IN_PER_1K, OPENAI_PRICE_OUT_PER_1K
 )
 
