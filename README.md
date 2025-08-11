@@ -22,6 +22,7 @@ A lightweight app to rank candidate resumes against a job description. It uses P
 5. Config: .env via python-dotenv
 
 ### Architecture
+'''
 
 [User] 
   └─> Streamlit UI
@@ -32,15 +33,16 @@ A lightweight app to rank candidate resumes against a job description. It uses P
              ▼
       [app.py] pipeline
         1) Build text records (id, text, name, source, ingested_at)
-        2) Pinecone Index upsertion(By Batch Insertion)      <-- Pinecone embeds (batch ≤96)
-        3) Base Model: Pinecone Index search with query
-        4) Re-ranker model: Pinecone Inference for re-ranking results based on results from base model (Similar to Retrieval and Re-rank method)
+        2) Pinecone Index.upsert(records=...)      <-- Pinecone embeds (batch ≤96)
+        3) Pinecone Index.search(inputs.text=JD, top_k=K)
+        4) Pinecone Inference.rerank(model=..., query, documents)
         5) OpenAI summaries for top results (budget-guarded)
         6) Visualize + CSV export + analytics
              │
              ▼
         [Streamlit session state]
         keeps last results visible across reruns (e.g., CSV clicks)
+'''
 
 ### How to use
 
