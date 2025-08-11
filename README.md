@@ -54,3 +54,9 @@ A lightweight app to rank candidate resumes against a job description. It uses P
 4. Click Run. You’ll see live steps: Ingest → Embed → Search → Re-rank → Summarize.
 5. View results line-by-line, open per-candidate snippets, and Download CSV.
 6. The app warns and stops if Top-K exceeds the number of resumes ingested in this run.
+
+## **Demo**
+
+![Main Page](images/Img1.png)
+![Results](images/Img2.png)
+![Analytics](images/Img3.png)
