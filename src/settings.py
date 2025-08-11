@@ -1,8 +1,8 @@
 import os
-from dotenv import load_dotenv
+# from dotenv import load_dotenv
 
 # Load .env once, early
-load_dotenv()
+# load_dotenv()
 
 def _get_bool(name: str, default: bool) -> bool:
     v = os.getenv(name)
@@ -11,9 +11,9 @@ def _get_bool(name: str, default: bool) -> bool:
     return str(v).strip().lower() in {"1", "true", "yes", "y", "on"}
 
 # ---------- Pinecone ----------
-PINECONE_API_KEY = os.getenv("PINECONE_API_KEY", "")
-PINECONE_INDEX   = os.getenv("PINECONE_INDEX", "")
-PINECONE_HOST    = os.getenv("PINECONE_HOST", None)
+# PINECONE_API_KEY = os.getenv("PINECONE_API_KEY", "")
+# PINECONE_INDEX   = os.getenv("PINECONE_INDEX", "")
+# PINECONE_HOST    = os.getenv("PINECONE_HOST", None)
 DEFAULT_NAMESPACE = os.getenv("PINECONE_NAMESPACE", "__default__")
 
 PINECONE_RERANK_MODEL   = os.getenv("PINECONE_RERANK_MODEL", "pinecone-rerank-v0")
@@ -21,7 +21,7 @@ INTEGRATED_BATCH_LIMIT  = int(os.getenv("INTEGRATED_BATCH_LIMIT", "96"))
 RETENTION_DAYS          = int(os.getenv("RETENTION_DAYS", "10"))
 
 # ---------- OpenAI ----------
-OPENAI_API_KEY   = os.getenv("OPENAI_API_KEY", "")
+# OPENAI_API_KEY   = os.getenv("OPENAI_API_KEY", "")
 OPENAI_MODEL     = os.getenv("OPENAI_MODEL", "gpt-4o-mini")
 MAX_OPENAI_BUDGET_USD   = float(os.getenv("MAX_OPENAI_BUDGET_USD", "0.5"))
 OPENAI_PRICE_IN_PER_1K  = float(os.getenv("OPENAI_PRICE_IN_PER_1K", "0.005"))
