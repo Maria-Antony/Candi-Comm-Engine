@@ -1,0 +1,8 @@
+streamlit
+plotly
+pinecone>=5.0.0
+openai>=1.40.0
+pdfplumber
+python-docx
+python-dotenv
+re
