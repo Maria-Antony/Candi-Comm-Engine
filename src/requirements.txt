@@ -5,4 +5,3 @@ openai>=1.40.0
 pdfplumber
 python-docx
 python-dotenv
-re
