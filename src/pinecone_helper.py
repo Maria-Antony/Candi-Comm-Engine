@@ -5,6 +5,7 @@ from pinecone import Pinecone
 import re
 
 from settings import (
+    PINECONE_API_KEY, PINECONE_INDEX, PINECONE_HOST,
     INTEGRATED_BATCH_LIMIT, PINECONE_RERANK_MODEL, RETENTION_DAYS
 )
 

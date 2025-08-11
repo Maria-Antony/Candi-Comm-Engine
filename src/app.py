@@ -10,7 +10,8 @@ import pandas as pd
 import plotly.express as px
 
 from settings import (
-    DEFAULT_TOP_K, MAX_UPLOAD_FILES, MAX_FILE_SIZE_MB, MAX_SNIPPET_CHARS
+    DEFAULT_TOP_K, MAX_UPLOAD_FILES, MAX_FILE_SIZE_MB, MAX_SNIPPET_CHARS,
+    OPENAI_API_KEY, PINECONE_API_KEY, PINECONE_INDEX
 )
 from resume_parser import extract_text_from_file, guess_name_from_filename
 from pinecone_helper import (
